@@ -266,16 +266,7 @@
 	add_action('admin_notices', 'mapfig_premium_admin_notice');
 	
 	
-	function mapfig_premium_canAddMaps() {
-		$totalMaps = mapfig_premium_model_mf_Table::getmf_map();
-		$status = mapfig_premium_check_license_status();
-
-		/*
-		if(count($totalMaps)>=500 && $status != "Active") {
-			return false;
-		}
-		*/
-		
+	function mapfig_premium_canAddMaps() {		
 		return true;
 	}
 	
