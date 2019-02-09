@@ -269,10 +269,12 @@
 	function mapfig_premium_canAddMaps() {
 		$totalMaps = mapfig_premium_model_mf_Table::getmf_map();
 		$status = mapfig_premium_check_license_status();
-		
-		if(count($totalMaps)>=5 && $status != "Active") {
+
+		/*
+		if(count($totalMaps)>=500 && $status != "Active") {
 			return false;
 		}
+		*/
 		
 		return true;
 	}
