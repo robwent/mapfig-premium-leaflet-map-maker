@@ -8,7 +8,9 @@ function mapfig_premium_tb_mf_install() {
 	  `mid` int(11) NOT NULL AUTO_INCREMENT,
 	  `title` varchar(255) DEFAULT NULL,
 	  `width` varchar(255) DEFAULT NULL,
+	  `width_parameter` ENUM(  'px',  '%' ) NOT NULL DEFAULT  'px',
 	  `height` varchar(255) DEFAULT NULL,
+	  `height_parameter` ENUM(  'px',  '%' ) NOT NULL DEFAULT  'px',
 	  `show_sidebar` int(1) NOT NULL DEFAULT '0',
 	  `show_search` int(1) NOT NULL DEFAULT '0',
 	  `show_measure` int(1) NOT NULL DEFAULT '0',
@@ -23,6 +25,7 @@ function mapfig_premium_tb_mf_install() {
 	  `groups_id` int(11) NOT NULL DEFAULT '0',
 	  `data` text NOT NULL,
 	  `data_gpx` longtext NOT NULL,
+	  `image_olverlays` LONGTEXT NOT NULL,
 	  UNIQUE KEY `id` (`mid`)
 	) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 	");
